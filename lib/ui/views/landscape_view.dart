@@ -12,15 +12,15 @@ class LandscapeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         itemCount: places.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4), itemBuilder: (context, index) {
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
+        itemBuilder: (context, index) {
           final Place place = places[index];
           return Card(
             child: InkWell(
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(
-                        builder: (context) => DetailPage(place: place)));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => DetailPage(place: place)));
               },
               child: Padding(
                 padding: const EdgeInsets.all(4),
@@ -35,13 +35,18 @@ class LandscapeView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 4,),
-                    Text(place.name, maxLines: 1,)
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      place.name,
+                      maxLines: 1,
+                    )
                   ],
                 ),
               ),
             ),
           );
-    });
+        });
   }
 }

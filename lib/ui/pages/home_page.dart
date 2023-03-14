@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tp_marseille/repositories/datasource.dart';
-import 'package:tp_marseille/ui/pages/detail_page.dart';
 import 'package:tp_marseille/ui/views/landscape_view.dart';
 import 'package:tp_marseille/ui/views/portrait_view.dart';
 

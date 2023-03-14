@@ -19,23 +19,26 @@ class PortraitView extends StatelessWidget {
           final Place place = places[index];
           return GestureDetector(
             onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(
-                      builder: (context) => DetailPage(place: place)));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => DetailPage(place: place)));
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               child: Row(
                 children: [
                   Text((index + 1).toString()),
-                  const SizedBox(width: 8,),
+                  const SizedBox(
+                    width: 8,
+                  ),
                   Expanded(
                       child: Text(
-                        place.name,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      )),
-                  const SizedBox(width: 8,),
+                    place.name,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  )),
+                  const SizedBox(
+                    width: 8,
+                  ),
                   Image.asset(
                     'images/${place.imagePath}.jpg',
                     width: 100,
